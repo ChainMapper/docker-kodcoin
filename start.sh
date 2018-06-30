@@ -6,7 +6,7 @@ GitHub: https://github.com/joshendriks/
 Docker: https://hub.docker.com/r/joshendriks/ 
 
 BTC: 1NCZgpMMoNwL6ZeFsEQ2kRZEzzzTd5TuGk
-KD: RDScEeb6HYgcTTRELJUQ967PMsAHdJQKjY"
+KOD: RDScEeb6HYgcTTRELJUQ967PMsAHdJQKjY"
 
 config="/config/Kodcoin.conf"
 if [ -f "$config" ]
@@ -22,5 +22,5 @@ then
     cp $wallet /data/.Kodcoin/wallet.dat
 fi
 
-echo "Starting KD daemon..."
+echo "Starting KOD daemon..."
 Kodcoind

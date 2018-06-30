@@ -1,5 +1,5 @@
 # docker-kodcoin
-Wallet and daemon for Kodcoin [KD] cryptocurrency on docker
+Wallet and daemon for Kodcoin [KOD] cryptocurrency on docker
 
 # Quickstart
 Type `docker run -it joshendriks/actinium` and see the wallet starting.
@@ -12,9 +12,9 @@ GitHub: https://github.com/joshendriks/
 Docker: https://hub.docker.com/r/joshendriks/
 
 BTC: 1NCZgpMMoNwL6ZeFsEQ2kRZEzzzTd5TuGk
-KD: RDScEeb6HYgcTTRELJUQ967PMsAHdJQKjY
+KOD: RDScEeb6HYgcTTRELJUQ967PMsAHdJQKjY
 
-Starting KD daemon...
+Starting KOD daemon...
 ```
 
 # Proper start
@@ -25,7 +25,7 @@ Additionally you can override the config and wallet file using volumes pointing 
 # Donations:
 BTC: 1NCZgpMMoNwL6ZeFsEQ2kRZEzzzTd5TuGk
 
-KD: RDScEeb6HYgcTTRELJUQ967PMsAHdJQKjY
+KOD: RDScEeb6HYgcTTRELJUQ967PMsAHdJQKjY
 
 # License
 MIT, see LICENSE file
