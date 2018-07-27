@@ -1,25 +1,36 @@
 #!/bin/bash
-echo "Docker Kodcoin wallet
 
-By: Jos Hendriks
-GitHub: https://github.com/joshendriks/
-Docker: https://hub.docker.com/r/joshendriks/ 
+#datadir="/data/.Kodcoin"
+#configfile="Kodcoin.conf"
+#ticker="KOD"
+#walletdaemon="Kodcoind"
 
-BTC: 1NCZgpMMoNwL6ZeFsEQ2kRZEzzzTd5TuGk
-KOD: RDScEeb6HYgcTTRELJUQ967PMsAHdJQKjY"
+datadir=$1
+configfile=$2
+ticker=$3
+walletdaemon=$4
 
-config="/config/Kodcoin.conf"
-if [ -f "$config" ]
-then
-    echo "Using $config"
-    cp $config /data/.Kodcoin/Kodcoin.conf
-fi
+configdir="/config"
+walletfile="wallet.dat"
+echo "Docker $ticker wallet
 
-wallet="/config/wallet.dat"
+By: ChainMapper
+Website: https://chainmapper.com"
+
+wallet="$configdir/$walletfile"
 if [ -f "$wallet" ]
 then
     echo "Using $wallet"
-    cp $wallet /data/.Kodcoin/wallet.dat
+    cp $wallet $datadir/$walletfile
+fi
+
+config="$configdir/$configfile"
+if [ -f "$config" ]
+then
+    echo "Using $config"
+    cp $config $datadir/$configfile
+else
+    /gen_config.sh > $datadir/$configfile
 fi
 
 echo "Starting KOD daemon..."

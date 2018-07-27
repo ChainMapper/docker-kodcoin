@@ -1,4 +1,4 @@
-FROM joshendriks/walletbase
+FROM chainmapper/walletbase-xenial-build
 
 ENV GIT_COIN_URL    https://github.com/kech1004/kodcoin.git
 ENV GIT_COIN_NAME   kodcoin 
