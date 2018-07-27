@@ -13,9 +13,6 @@ RUN	git clone $GIT_COIN_URL $GIT_COIN_NAME \
 	&& make install \
 	&& mkdir /data \
 	&& mkdir /data/.Kodcoin
-	
-#Add a config so you can run without providing a bitnodes.conf through a volume
-COPY Kodcoin.conf /data/.Kodcoin/Kodcoin.conf
 
 #rpc and mn port
 EXPOSE 7857 7867
