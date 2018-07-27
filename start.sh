@@ -1,10 +1,5 @@
 #!/bin/bash
 
-#datadir="/data/.Kodcoin"
-#configfile="Kodcoin.conf"
-#ticker="KOD"
-#walletdaemon="Kodcoind"
-
 datadir=$1
 configfile=$2
 ticker=$3
@@ -34,4 +29,4 @@ else
 fi
 
 echo "Starting KOD daemon..."
-Kodcoind
+$walletdaemon

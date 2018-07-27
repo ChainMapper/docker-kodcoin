@@ -21,4 +21,4 @@ ENV HOME /data
 
 COPY start.sh /start.sh
 RUN chmod 777 /start.sh
-CMD /start.sh
+CMD /start.sh /data/.Kodcoin Kodcoin.conf KOD Kodcoind
