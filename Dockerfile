@@ -20,5 +20,6 @@ EXPOSE 7857 7867
 ENV HOME /data
 
 COPY start.sh /start.sh
-RUN chmod 777 /start.sh
+COPY gen_config.sh /gen_config.sh
+RUN chmod 777 /*.sh
 CMD /start.sh /data/.Kodcoin Kodcoin.conf KOD Kodcoind
