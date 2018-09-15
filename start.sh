@@ -1,16 +1,18 @@
 #!/bin/bash
 
-datadir=$1
-configfile=$2
-ticker=$3
-walletdaemon=$4
+configfile=$1
+ticker=$2
+walletdaemon=$3
 
+datadir=/data/wallet
 configdir="/config"
 walletfile="wallet.dat"
 echo "Docker $ticker wallet
 
 By: ChainMapper
 Website: https://chainmapper.com"
+
+mkdir -p $datadir
 
 wallet="$configdir/$walletfile"
 if [ -f "$wallet" ]
@@ -25,8 +27,9 @@ then
     echo "Using $config"
     cp $config $datadir/$configfile
 else
+    touch $datadir/$configfile
     /gen_config.sh > $datadir/$configfile
 fi
 
-echo "Starting KOD daemon..."
-$walletdaemon
+echo "Starting $ticker daemon..."
+$walletdaemon -datadir=$datadir
