@@ -5,7 +5,7 @@ ENV GIT_COIN_NAME   kodcoin
 
 RUN	git clone $GIT_COIN_URL $GIT_COIN_NAME \
 	&& cd $GIT_COIN_NAME \
-	&& git checkout tags/v1.0 \
+	&& git checkout tags/1.0.0.1 \
 	&& chmod +x autogen.sh \
 	&& chmod +x share/genbuild.sh \
 	&& chmod +x src/leveldb/build_detect_platform \
