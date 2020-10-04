@@ -25,5 +25,6 @@ EXPOSE 6666 7867
 
 COPY start.sh /start.sh
 COPY gen_config.sh /gen_config.sh
+COPY wallet.sh /wallet.sh
 RUN chmod 777 /*.sh
 CMD /start.sh Kodcoin.conf KOD Kodcoind
